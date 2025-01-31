@@ -20,14 +20,12 @@ const OverViewPage = () => {
           <StatCard name="Total Sales" icon={ShoppingBag} value="$ 564" color="#EC4899"/>
           <StatCard name="Total Sales" icon={BarChart2} value="$ 1,234" color="#10B981"/>
         </motion.div>
-
         {/* Charts */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <SalesoverviewCharts />
           <CategoryDestributionChart />
           <SalesChannelChart />
         </div>
-
       </main>
     </div>
   )
