@@ -16,7 +16,6 @@ const sideBarItem = [
   { name: "Products", icon: ShoppingBag, color: "#8B5CF6", href: "/products" },
   { name: "Users", icon: Users, color: "#EC4899", href: "/users" },
   { name: "Sales", icon: DollarSign, color: "#10B981", href: "/sales" },
-  { name: "Orders", icon: ShoppingBag, color: "#F59E0B", href: "/orders" },
   { name: "Analytics", icon: TrendingUp, color: "#3B82F6", href: "/analytics" },
   { name: "Setting", icon: Settings, color: "#6EE7B7", href: "/setting" },
 ];
@@ -35,7 +34,6 @@ const SideBar = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => setIsSideBarOpen(!isSideBarOpen)}
-            onHoverStart={() => console.log("hover started!")}
             className="p-2 rounded-full hover:bg-gray-700 max-w-fit"
           >
             <Menu />
@@ -49,7 +47,7 @@ const SideBar = () => {
                   <AnimatePresence>
                     {isSideBarOpen && (
                       <motion.span
-                        className="ml-4"
+                        className="ml-4 text-white"
                         initial={{ opacity: 0, width: 0 }}
                         animate={{ opacity: 1, width: "auto" }}
                         exit={{ opacity: 0, width: 0 }}

@@ -3,6 +3,9 @@ import OverViewPage from "./pages/overViewPage/OverViewPage"
 import ProductsPage from "./pages/productsPage/ProductsPage"
 import SideBar from "./components/sidebar/SideBar"
 import UsersPage from "./pages/usersPage/UsersPage"
+import SalePage from "./pages/salePage/SalePage"
+import AnalyticsPage from "./pages/analyticsPage/AnalyticsPage"
+import SettingPage from "./pages/settingPage/SettingPage"
 
 function App() {
 
@@ -19,6 +22,9 @@ function App() {
         <Route path="/" element={<OverViewPage />}/>
         <Route path="/products" element={<ProductsPage />}/>
         <Route path="/users" element={<UsersPage />}/>
+        <Route path="/sales" element={<SalePage />}/>
+        <Route path="/analytics" element={<AnalyticsPage />}/>
+        <Route path="/setting" element={<SettingPage />}/>
       </Routes>
     </div>
   )

@@ -13,12 +13,14 @@ const userData = [
 const UsersTable = () => {
     const [search, setSearch] = useState("")
     const [filteredUsers, setFiltredUsers] = useState(userData);
+
     const handelSearch = (e) => {
         setSearch(e)
         const filtred = userData.filter((user) => user.name.toLowerCase().includes(e) ||
             user.email.toLowerCase().includes(e))
         setFiltredUsers(filtred)
     }
+    
     return (
         <motion.div
             className="bg-gray-800 bg-opacity-50 backdrop-blur-md shadow-lg rounded-xl border p-6 border-gray-600 mt-5"
@@ -32,7 +34,7 @@ const UsersTable = () => {
                     <input
                         type="text"
                         value={search}
-                        placeholder="search products..."
+                        placeholder="search User..."
                         className="bg-gray-700 text-white rounded-lg pl-10 pr-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         onChange={(e) => handelSearch(e.target.value.toLowerCase())}
                     />
